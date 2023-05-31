@@ -1,0 +1,215 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: rgb(21, 34, 31);
+    font-size: calc(1vw + 12px);
+}
+
+header{
+    color: #ffffff;
+    text-align: center;
+}
+nav {
+    display: block;
+    margin-left: auto;
+    background-color: #3f71c2;
+    text-align: right;
+}
+
+nav ul li {
+    margin-left: 10px;
+}
+
+nav a {
+    color: rgb(146, 255, 127);
+    text-decoration: none;
+}
+
+h1{
+    font-size: 1em;
+}
+
+section{
+    width: 90%;
+    padding: 1rem;
+    margin: 2em auto;
+    height: min-content;
+    color: rgb(0, 69, 84);
+    text-align: center;
+    background-color: rgb(159, 196, 191);
+    border-radius: 5px;
+    border-spacing: 5px;
+    outline: 1px solid rgb(163, 229, 255);
+    outline-offset: 4px;
+    outline-style: solid;
+    box-shadow: 0 0 18px 12px rgb(87, 132, 150);
+}
+
+#form {
+    background-color: rgba(75, 141, 179, 0.284);
+    border-radius: 8px;
+    width: min-content;
+    display: grid;
+    text-align: left;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+    margin: 1em auto;
+    padding: 1em 1em;
+}
+#form input, #combobox{
+    font-size: 0.8em;
+    grid-column: 2;
+}
+#form label{
+    font-size: 0.9em;
+    grid-column: 1;
+}
+
+#form .botones-form{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row: auto;
+    width: 100%;
+    margin: auto;
+}
+#form .boton-form{
+    font-size: 0.8em;
+    display: block;
+    margin: auto;
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 4em; 
+}
+button.guardar{
+    background-image: url("./save-icon.svg");
+    background-repeat: no-repeat;
+    padding-left: 18px;
+}
+
+
+
+
+#table-section{
+    font-size: 18px;
+}
+
+#tabla-registros {
+    width: 100%;
+    margin: auto;
+    color: rgb(0, 93, 113);
+    background-color: rgb(0, 0, 0);
+}
+
+#tabla-registros thead{
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 95, 122);
+    text-transform: capitalize;
+    text-align: center;
+}
+
+#tabla-registros tbody {
+    font-size: 0.8em;
+    text-align: left;
+    color: rgb(0, 0, 53);
+    background-color: rgb(146, 193, 170);
+}
+
+tr{
+    transition: 0.3s;
+}
+
+tr:active{
+    background-color: #ffffff7b;
+}
+
+#tabla-registros td{
+    padding: 0.4em;
+    padding-left: 1em;
+    max-width: 6em;
+    overflow: auto;
+
+}
+
+td::-webkit-scrollbar {
+    width: 0;
+    display: none;
+}
+
+#tabla-registros .sexo-hombre{
+    background-color: rgba(0, 89, 255, 0.3);
+}
+
+#tabla-registros .sexo-mujer{
+    background-color: rgba(255, 0, 149, 0.3);
+}
+
+.overlay {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+
+.spinner {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    margin-top: 0%;
+    margin-top: -150px;
+    background-image: url("./spinner.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: spinner-rotate 2s infinite linear;
+}
+
+.sexo-fluido {
+animation: color-change 3s infinite;
+}  
+
+@keyframes spinner-rotate {
+    from {
+        transform: translateY(50vh) rotate(0deg) ;
+    }
+    to {
+        transform:  translateY(50vh) rotate(360deg);
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #7e6dff;
+    padding: 10px;
+}
+ul {
+    text-decoration: none;
+    font-size: 0.6em;
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+  
+footer ul li {
+    margin-right: 10px;
+}
+footer a {
+    color: rgb(127, 255, 174);
+    text-decoration: none;
+}
+  
+footer p {
+    color: rgb(127, 255, 174);
+    font-size: 0.6em;
+    margin: 0;
+}  

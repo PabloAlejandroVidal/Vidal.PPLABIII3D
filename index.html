@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="./index.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Laboratorio III - Vidal Pablo</title>
+</head>
+<body>
+    <div id="overlay" class="overlay">
+        <div class="spinner"></div>
+    </div>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Personajes</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+        <h1>CRUD de Anuncios</h1>
+    </header>
+    <main>
+        <section id="form-section">
+            <h2>Administrador de anuncios</h2>
+            <form id="form">
+                <label for="Nombre">Nombre</label>
+                <input type="text" name="txtNombre" id="Nombre" autocomplete="off" placeholder="Ingrese nombre" required pattern="^([a-zA-ZñÑáéíóúÁÉÍÓÚ]{2,}\s?)*(?<!\s)$">
+                <label for="Alias">Alias</label>
+                <input type="text" name="txtAlias" id="Alias" autocomplete="off" placeholder="Ingrese alter-ego" required pattern="^([a-zA-ZñÑáéíóúÁÉÍÓÚ]{2,}\s?)*(?<!\s)$">
+                
+                <label for="Marvel">Editorial</label>
+                <div class="div-editorial">
+                    <label for="Marvel">Marvel</label>
+                    <input type="radio" id="Marvel" name="rdoEditorial" value="Marvel" checked>
+                    <label for="DcComics">DCComics</label>
+                    <input type="radio" id="DcComics" name="RdoEditorial" value="Dc Comics">
+                </div>
+
+                <label for="fuerza">Fuerza</label>
+                <input type="range" name="rngFuerza" placeholder="fuerza" min="1" max="999" value="200">
+
+                <label for="Arma">Arma</label>
+                <select name="slcArma" id="Arma">
+                    <option value="Armadura">Armadura</option>
+                    <option value="Espada">Espada</option>
+                    <option value="Martillo">Martillo</option>
+                    <option value="Escudo">Escudo</option>
+                    <option value="ArmaDeFuego">Arma de Fuego</option>
+                    <option value="Flechas">Flechas</option>
+                </select>
+
+                <input type="hidden" name="txtId">
+                <div id="botones-form" class="botones-form">
+                </div>
+            </form>
+        </section>
+        <section id="table-section">
+            <h2>Lista de Superheroes</h2>
+        </section>
+    </main>
+    
+    <footer>
+        <ul>
+            <li><a href="#">Nosotros</a></li>
+            <li><a href="#">Anuncios</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+        <p>Laboratorio III - Todos los Derechos Reservados 2020 &copy;</p>
+    </footer>
+</body>
+</html>
